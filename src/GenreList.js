@@ -43,7 +43,7 @@ const GenreList = () => {
     }
     const fetchSearch=async()=>{
         const GENRE_ID=selected.join(',');
-        const url=`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID}`;
+        const url=`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${GENRE_ID}&language=ko-KR`;
         try{
             const response = await axios.get(url);
             setMovise(response.data.results);
